@@ -50,10 +50,10 @@ class Song
   end
 
   def self.genres
-    @@genres
+    @@genre_count.keys
   end
 
   def self.artists
-    @@artists
+    @@artist_count.keys
   end
 end
