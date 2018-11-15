@@ -31,6 +31,6 @@ class Song
   end
 
   def self.genre_count(genre)
-    @@genres.keys.count
+    @@genres[genre]
   end
 end
