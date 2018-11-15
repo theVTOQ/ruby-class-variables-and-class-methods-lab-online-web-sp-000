@@ -25,7 +25,7 @@ class Song
     end
 
     if !@@artists.include?(artist)
-      @@artists << artist 
+      @@artists << artist
     end
   end
 
