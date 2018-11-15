@@ -10,26 +10,26 @@ class Song
 
     add_artist(artist)
     add_genre(genre)
-    
+
     @@count += 1
   end
 
   def add_artist(artist)
-    if @@artists[artist] == nil 
+    if @@artists[artist] == nil
       @@artists[artist] = 1
     else
       @@artists[artist] += 1
     end
   end
 
-  def add_genre
-    if @@genres[genre] == nil 
+  def add_genre(genre)
+    if @@genres[genre] == nil
       @@genres[genre] = 1
     else
       @@genres[genre] += 1
     end
   end
-  
+
   def self.genre_count(genre)
     @@genres[genre]
   end
