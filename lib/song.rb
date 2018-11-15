@@ -38,7 +38,7 @@ class Song
     @@artists
   end
 
-  def self.country
+  def self.count
     @@count
   end
 end
