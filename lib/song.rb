@@ -1,7 +1,9 @@
 class Song
   attr_accessor :name, :artist, :genre
-  @@artists = {}
-  @@genres = {}
+  @@artists = []
+  @@genres = []
+  @@artist_count = {}
+  @@genre_count = {}
   @@count = 0
 
   def initialize(artist, genre)
@@ -15,27 +17,31 @@ class Song
   end
 
   def add_artist(artist)
-    if @@artists[artist] == nil
-      @@artists[artist] = 1
+    if @@artist_count[artist] == nil
+      @@artist_count[artist] = 1
     else
-      @@artists[artist] += 1
+      @@artist_count[artist] += 1
     end
+
+    @@artists << artist
   end
 
   def add_genre(genre)
-    if @@genres[genre] == nil
-      @@genres[genre] = 1
+    if @@genre_count[genre] == nil
+      @@genre_count[genre] = 1
     else
-      @@genres[genre] += 1
+      @@genre_count[genre] += 1
     end
+
+    @@genres << genre
   end
 
   def self.genre_count
-    @@genres
+    @@genre_count
   end
 
   def self.artist_count
-    @@artists
+    @@artist_count
   end
 
   def self.count
