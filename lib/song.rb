@@ -24,7 +24,7 @@ class Song
       @@artist_count[artist] += 1
     end
 
-    @@artists << artist
+    @@artists << artist if !@@artists.include?(artist)
   end
 
   def add_genre(genre)
@@ -34,7 +34,7 @@ class Song
       @@genre_count[genre] += 1
     end
 
-    @@genres << genre
+    @@genres << genre if !@@genres.include?(genre)
   end
 
   def self.genre_count
